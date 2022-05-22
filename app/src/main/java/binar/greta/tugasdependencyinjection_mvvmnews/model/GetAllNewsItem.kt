@@ -1,8 +1,11 @@
 package binar.greta.tugasdependencyinjection_mvvmnews.model
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class GetAllNewsItem(
     @SerializedName("author")
     val author: String,
@@ -16,4 +19,4 @@ data class GetAllNewsItem(
     val image: String,
     @SerializedName("title")
     val title: String
-)
+) : Parcelable
